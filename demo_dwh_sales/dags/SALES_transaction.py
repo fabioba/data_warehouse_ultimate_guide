@@ -6,7 +6,7 @@ import pendulum
 
 from airflow.decorators import dag, task_group
 from airflow.operators.postgres_operator import PostgresOperator
-from demo_dwh_sales.dags.resources.utils import get_query
+from dags.resources.utils import get_query
 
 
 
@@ -35,38 +35,13 @@ def SALES_transaction():
             sql = get_query('include/sql/cfg_flow_manager/upload_cfg_flow_manager.sql'),
             postgres_conn_id = 'postgres_conn',
             parameters={
+                'SCHEMA':'STAGING',
                 'PROCESS' : 'EXTRACT'
             }
         )
 
         extract_sales >> upload_cfg_flow_manager_extract
 
-    @task_group(group_id="transform")
-    def transform():
-
-        
-        truncate_transform_sales = PostgresOperator(
-            task_id = "truncate_transform_sales",
-            sql = get_query('include/sql/transform/truncate_transform_sales.sql'),
-            postgres_conn_id = 'postgres_conn'
-        )
-
-        transform_sales = PostgresOperator(
-            task_id = "transform_sales",
-            sql = get_query('include/sql/transform/transform_sales.sql'),
-            postgres_conn_id = 'postgres_conn'
-        )
-
-        upload_cfg_flow_manager_transform = PostgresOperator(
-            task_id = "upload_cfg_flow_manager_transform",
-            sql = get_query('include/sql/cfg_flow_manager/upload_cfg_flow_manager.sql'),
-            postgres_conn_id = 'postgres_conn',
-            parameters={
-                'PROCESS' : 'TRANSFORM'
-            }
-        )
-
-        truncate_transform_sales >> transform_sales >> upload_cfg_flow_manager_transform
 
     @task_group(group_id="load_transform")
     def load_transform():
@@ -78,13 +53,13 @@ def SALES_transaction():
             
             truncate_stg_sales = PostgresOperator(
                 task_id = "truncate_stg_sales",
-                sql = get_query('include/sql/load_transform/truncate_stg_sales.sql'),
+                sql = get_query('include/sql/load_transform/stg/truncate_stg_sales.sql'),
                 postgres_conn_id = 'postgres_conn'
             )
 
             insert_stg_sales = PostgresOperator(
                 task_id = "insert_stg_sales",
-                sql = get_query('include/sql/load_transform/insert_stg_sales.sql'),
+                sql = get_query('include/sql/load_transform/stg/insert_stg_sales.sql'),
                 postgres_conn_id = 'postgres_conn'
             )
 
@@ -96,19 +71,19 @@ def SALES_transaction():
 
             dim_product = PostgresOperator(
                 task_id = "dim_product",
-                sql = get_query('include/sql/load_transform/dim_product.sql'),
+                sql = get_query('include/sql/load_transform/dim/dim_product.sql'),
                 postgres_conn_id = 'postgres_conn'
             )
 
             dim_customer = PostgresOperator(
                 task_id = "dim_customer",
-                sql = get_query('include/sql/load_transform/dim_customer.sql'),
+                sql = get_query('include/sql/load_transform/dim/dim_customer.sql'),
                 postgres_conn_id = 'postgres_conn'
             )
 
             dim_payment = PostgresOperator(
                 task_id = "dim_payment",
-                sql = get_query('include/sql/load_transform/dim_payment.sql'),
+                sql = get_query('include/sql/load_transform/dim/dim_payment.sql'),
                 postgres_conn_id = 'postgres_conn'
             )
 
@@ -127,13 +102,13 @@ def SALES_transaction():
 
                 truncate_fct_transactions_current_run = PostgresOperator(
                     task_id = "truncate_fct_transactions_current_run",
-                    sql = get_query('include/sql/load_transform/fct/fct_transactions_current_run/truncate_fct_current_run.sql'),
+                    sql = get_query('include/sql/load_transform/fct/fct_transactions_current_run/truncate.sql'),
                     postgres_conn_id = 'postgres_conn'
                 )
 
                 insert_fct_transactions_current_run = PostgresOperator(
                     task_id = "insert_fct_transactions_current_run",
-                    sql = get_query('include/sql/load_transform/fct/fct_transactions_current_run/insert_fct_current_run.sql'),
+                    sql = get_query('include/sql/load_transform/fct/fct_transactions_current_run/insert.sql'),
                     postgres_conn_id = 'postgres_conn'
                 )
 
@@ -144,13 +119,13 @@ def SALES_transaction():
 
                 delete_update_fct_transactions = PostgresOperator(
                     task_id = "delete_update_fct_transactions",
-                    sql = get_query('include/sql/load_transform/fct/fct_transactions/delete_update_fct_transactions.sql'),
+                    sql = get_query('include/sql/load_transform/fct/fct_transactions/delete_update.sql'),
                     postgres_conn_id = 'postgres_conn'
                 )
 
                 insert_fct_transactions = PostgresOperator(
                     task_id = "insert_fct_transactions",
-                    sql = get_query('include/sql/load_transform/fct/fct_transactions/insert_fct_transactions.sql'),
+                    sql = get_query('include/sql/load_transform/fct/fct_transactions/insert.sql'),
                     postgres_conn_id = 'postgres_conn'
                 )
 
@@ -164,6 +139,7 @@ def SALES_transaction():
             sql = get_query('include/sql/cfg_flow_manager/upload_cfg_flow_manager.sql'),
             postgres_conn_id = 'postgres_conn',
             parameters={
+                'SCHEMA':'STAGING',
                 'PROCESS' : 'LOAD_TRANSFORM'
             }
         )
@@ -173,6 +149,6 @@ def SALES_transaction():
 
 
     
-    extract() >> transform() >> load_transform()
+    extract() >> load_transform()
 
 SALES_transaction()
