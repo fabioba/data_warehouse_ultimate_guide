@@ -1,0 +1,1 @@
+truncate table sales.FCT_SALES_CURRENT_RUN;

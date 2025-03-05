@@ -1,0 +1,1 @@
+truncate table sales.STG_SALES;

@@ -4,6 +4,14 @@
 ## Business Requirements
 The business needs to keep track the amount of product sold in the past year.
 
+## Getting Started
+
+1. create a Docker image that contains Postgres and PgAdmin
+2. run from terminal
+```yaml
+docker-compose up -d
+```
+
 
 ## Data Flow
 The data source is static: CSV file.
