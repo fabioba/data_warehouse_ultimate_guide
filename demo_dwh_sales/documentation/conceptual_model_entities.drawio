@@ -1,0 +1,128 @@
+<mxfile host="65bd71144e">
+    <diagram id="ut0Wxn49TWIXNG7IUd-G" name="table_entities">
+        <mxGraphModel dx="850" dy="534" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="PE9amwRLzX3UN0lb-pWb-1" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=16;strokeWidth=1;swimlaneFillColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="190" y="140" width="1109" height="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="PE9amwRLzX3UN0lb-pWb-2" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;strokeWidth=1;swimlaneFillColor=#000000;" parent="PE9amwRLzX3UN0lb-pWb-1" vertex="1">
+                    <mxGeometry width="1109" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="PE9amwRLzX3UN0lb-pWb-3" value="ENTITY" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#000000;overflow=hidden;fillColor=#dae8fc;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=20;fontStyle=1;strokeWidth=1;swimlaneFillColor=#000000;" parent="PE9amwRLzX3UN0lb-pWb-2" vertex="1">
+                    <mxGeometry width="170" height="90" as="geometry">
+                        <mxRectangle width="170" height="90" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="PE9amwRLzX3UN0lb-pWb-4" value="DESCRIPTION" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#000000;overflow=hidden;fillColor=#dae8fc;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=20;fontStyle=1;strokeWidth=1;swimlaneFillColor=#000000;" parent="PE9amwRLzX3UN0lb-pWb-2" vertex="1">
+                    <mxGeometry x="170" width="301" height="90" as="geometry">
+                        <mxRectangle width="301" height="90" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="PE9amwRLzX3UN0lb-pWb-5" value="RELATIONSHIP" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#000000;overflow=hidden;fillColor=#dae8fc;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=20;fontStyle=1;strokeWidth=1;swimlaneFillColor=#000000;" parent="PE9amwRLzX3UN0lb-pWb-2" vertex="1">
+                    <mxGeometry x="471" width="319" height="90" as="geometry">
+                        <mxRectangle width="319" height="90" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3DvLu4khRIEmsDTxHqWY-5" value="ATTRIBUTES" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#000000;overflow=hidden;fillColor=#dae8fc;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=20;fontStyle=1;strokeWidth=1;swimlaneFillColor=#000000;" parent="PE9amwRLzX3UN0lb-pWb-2" vertex="1">
+                    <mxGeometry x="790" width="319" height="90" as="geometry">
+                        <mxRectangle width="319" height="90" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="PE9amwRLzX3UN0lb-pWb-6" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;strokeWidth=1;swimlaneFillColor=#000000;" parent="PE9amwRLzX3UN0lb-pWb-1" vertex="1">
+                    <mxGeometry y="90" width="1109" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="PE9amwRLzX3UN0lb-pWb-7" value="TRANSACTION" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;strokeWidth=1;swimlaneFillColor=#000000;" parent="PE9amwRLzX3UN0lb-pWb-6" vertex="1">
+                    <mxGeometry width="170" height="160" as="geometry">
+                        <mxRectangle width="170" height="160" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="PE9amwRLzX3UN0lb-pWb-8" value="Each transaction is performed by a customer. The transaciton is made by a payment method. Each transaction refers to a product type" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;strokeWidth=1;swimlaneFillColor=#000000;" parent="PE9amwRLzX3UN0lb-pWb-6" vertex="1">
+                    <mxGeometry x="170" width="301" height="160" as="geometry">
+                        <mxRectangle width="301" height="160" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="PE9amwRLzX3UN0lb-pWb-9" value="One transaction is made by one customer.&lt;div&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;One transaction refers to one product type.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;scrollbar-color: light-dark(#e2e2e2, #4b4b4b)&lt;br/&gt;&#x9;&#x9;&#x9;&#x9;&#x9;light-dark(#fbfbfb, var(--dark-panel-color));&quot;&gt;&lt;div style=&quot;scrollbar-color: light-dark(#e2e2e2, #4b4b4b)&lt;br/&gt;&#x9;&#x9;&#x9;&#x9;&#x9;light-dark(#fbfbfb, var(--dark-panel-color));&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); scrollbar-color: light-dark(#e2e2e2, #4b4b4b)&lt;br/&gt;&#x9;&#x9;&#x9;&#x9;&#x9;light-dark(#fbfbfb, var(--dark-panel-color));&quot;&gt;&lt;br class=&quot;Apple-interchange-newline&quot;&gt;One transaction is made by one payment method.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;strokeWidth=1;swimlaneFillColor=#000000;verticalAlign=middle;" parent="PE9amwRLzX3UN0lb-pWb-6" vertex="1">
+                    <mxGeometry x="471" width="319" height="160" as="geometry">
+                        <mxRectangle width="319" height="160" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3DvLu4khRIEmsDTxHqWY-6" value="- transaction_id&lt;div&gt;- transaction_date&lt;/div&gt;&lt;div&gt;- quantity&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;strokeWidth=1;swimlaneFillColor=#000000;verticalAlign=middle;" parent="PE9amwRLzX3UN0lb-pWb-6" vertex="1">
+                    <mxGeometry x="790" width="319" height="160" as="geometry">
+                        <mxRectangle width="319" height="160" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="PE9amwRLzX3UN0lb-pWb-10" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;strokeWidth=1;swimlaneFillColor=#000000;" parent="PE9amwRLzX3UN0lb-pWb-1" vertex="1">
+                    <mxGeometry y="250" width="1109" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="PE9amwRLzX3UN0lb-pWb-11" value="CUSTOMER" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;strokeWidth=1;swimlaneFillColor=#000000;" parent="PE9amwRLzX3UN0lb-pWb-10" vertex="1">
+                    <mxGeometry width="170" height="90" as="geometry">
+                        <mxRectangle width="170" height="90" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="PE9amwRLzX3UN0lb-pWb-12" value="The customer is the entity that perform a transaction" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;strokeWidth=1;swimlaneFillColor=#000000;" parent="PE9amwRLzX3UN0lb-pWb-10" vertex="1">
+                    <mxGeometry x="170" width="301" height="90" as="geometry">
+                        <mxRectangle width="301" height="90" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="PE9amwRLzX3UN0lb-pWb-13" value="Customer performs one or more transactions." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;strokeWidth=1;swimlaneFillColor=#000000;" parent="PE9amwRLzX3UN0lb-pWb-10" vertex="1">
+                    <mxGeometry x="471" width="319" height="90" as="geometry">
+                        <mxRectangle width="319" height="90" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3DvLu4khRIEmsDTxHqWY-7" value="- customer_id&lt;div&gt;- loyalty_card&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;strokeWidth=1;swimlaneFillColor=#000000;" parent="PE9amwRLzX3UN0lb-pWb-10" vertex="1">
+                    <mxGeometry x="790" width="319" height="90" as="geometry">
+                        <mxRectangle width="319" height="90" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="hpNWb869jJFFMArHxDOy-1" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;strokeWidth=1;swimlaneFillColor=#000000;" parent="PE9amwRLzX3UN0lb-pWb-1" vertex="1">
+                    <mxGeometry y="340" width="1109" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="hpNWb869jJFFMArHxDOy-2" value="PRODUCT" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;strokeWidth=1;swimlaneFillColor=#000000;" parent="hpNWb869jJFFMArHxDOy-1" vertex="1">
+                    <mxGeometry width="170" height="90" as="geometry">
+                        <mxRectangle width="170" height="90" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="hpNWb869jJFFMArHxDOy-3" value="The product is part of a transaction" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;strokeWidth=1;swimlaneFillColor=#000000;" parent="hpNWb869jJFFMArHxDOy-1" vertex="1">
+                    <mxGeometry x="170" width="301" height="90" as="geometry">
+                        <mxRectangle width="301" height="90" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="hpNWb869jJFFMArHxDOy-4" value="Products are part of one or more transactions. However, one transaction includes one product type" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;strokeWidth=1;swimlaneFillColor=#000000;" parent="hpNWb869jJFFMArHxDOy-1" vertex="1">
+                    <mxGeometry x="471" width="319" height="90" as="geometry">
+                        <mxRectangle width="319" height="90" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3DvLu4khRIEmsDTxHqWY-8" value="-product_id&lt;div&gt;- cost&lt;/div&gt;&lt;div&gt;- price&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;strokeWidth=1;swimlaneFillColor=#000000;" parent="hpNWb869jJFFMArHxDOy-1" vertex="1">
+                    <mxGeometry x="790" width="319" height="90" as="geometry">
+                        <mxRectangle width="319" height="90" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="hpNWb869jJFFMArHxDOy-5" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;strokeWidth=1;swimlaneFillColor=#000000;" parent="PE9amwRLzX3UN0lb-pWb-1" vertex="1">
+                    <mxGeometry y="430" width="1109" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="hpNWb869jJFFMArHxDOy-6" value="PAYMENT&amp;nbsp;&lt;div&gt;METHOD&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;strokeWidth=1;swimlaneFillColor=#000000;" parent="hpNWb869jJFFMArHxDOy-5" vertex="1">
+                    <mxGeometry width="170" height="90" as="geometry">
+                        <mxRectangle width="170" height="90" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="hpNWb869jJFFMArHxDOy-7" value="The transaction is made by a payment method" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;strokeWidth=1;swimlaneFillColor=#000000;" parent="hpNWb869jJFFMArHxDOy-5" vertex="1">
+                    <mxGeometry x="170" width="301" height="90" as="geometry">
+                        <mxRectangle width="301" height="90" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="hpNWb869jJFFMArHxDOy-8" value="Payment method is made by one single transaction. However, the same payment method might be used for several transactions." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;strokeWidth=1;swimlaneFillColor=#000000;" parent="hpNWb869jJFFMArHxDOy-5" vertex="1">
+                    <mxGeometry x="471" width="319" height="90" as="geometry">
+                        <mxRectangle width="319" height="90" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3DvLu4khRIEmsDTxHqWY-9" value="- payment_id&lt;div&gt;- credit_card&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;strokeWidth=1;swimlaneFillColor=#000000;" parent="hpNWb869jJFFMArHxDOy-5" vertex="1">
+                    <mxGeometry x="790" width="319" height="90" as="geometry">
+                        <mxRectangle width="319" height="90" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
