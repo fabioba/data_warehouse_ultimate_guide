@@ -23,4 +23,8 @@ The steps to follow:
 1. business understanding: the business needs to keep track the amount of product sold in order to improve the supply chain strategy
 2. declare the grain: one row identifies one transaction 
 3. identify the dimensions: product, customer, payment method
-4. identify the facts (measurements): quantity, cost, total cost
+4. identify the facts (measurements): total_price, total cost, profit
+![img](documentation/img/logical_model_entities.png)
+
+
+![img](documentation/img/logical_model.png)
